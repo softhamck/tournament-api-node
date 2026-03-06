@@ -1,0 +1,49 @@
+{
+	"info": {
+		"_postman_id": "33272a9a-f83c-4425-8d42-9ff560654be4",
+		"name": "Local",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "31073324"
+	},
+	"item": [
+		{
+			"name": "Create Championship",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"if (pm.response.code === 201) {\r",
+							"  const json = pm.response.json();\r",
+							"  if (json && json.id) {\r",
+							"    pm.environment.set(\"championshipId\", json.id);\r",
+							"    console.log(\"Saved championshipId:\", json.id);\r",
+							"  } else {\r",
+							"    console.log(\"No id in response; championshipId not changed\");\r",
+							"  }\r",
+							"}"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Torneo 1\",\r\n  \"startDate\": \"2026-03-22\",\r\n  \"endDate\": \"2026-04-31\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{baseUrl}}/championships"
+			},
+			"response": []
+		}
+	]
+}
