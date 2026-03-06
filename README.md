@@ -40,3 +40,23 @@ POST /api/matches/{matchId}/result
 
 Ver tabla
 GET /api/championships/{id}/standings
+
+## Estructura del proyecto
+
+tournament-api-node
+│
+├── src
+│   ├── app
+│   ├── controllers
+│   ├── domain
+│   ├── infra
+│   ├── ports
+│   ├── services
+│   ├── util
+│   └── server.js
+│
+├── test_postman
+│
+├── package.json
+├── package-lock.json
+└── .gitignore
