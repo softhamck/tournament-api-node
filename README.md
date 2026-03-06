@@ -43,6 +43,7 @@ GET /api/championships/{id}/standings
 
 ## Estructura del proyecto
 
+```
 tournament-api-node
 │
 ├── src
@@ -60,3 +61,5 @@ tournament-api-node
 ├── package.json
 ├── package-lock.json
 └── .gitignore
+```
+
